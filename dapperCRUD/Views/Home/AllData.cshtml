@@ -1,0 +1,52 @@
+﻿@model IEnumerable<User>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row table-div my-3">
+    <div class="col-12 my-3 upper-btn">
+        <button class="btn btn-primary" id="add-user">New</button>
+        <button class="btn btn-danger" id="remove-form">Cancel</button>
+
+
+
+    </div>
+    <div class="col-8 m-auto py-2">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="add-row">
+                @foreach (var item in Model)
+                {
+                    <tr id="@item.U_id">
+                        <th scope="row">@item.U_id</th>
+                        <td>@item.Email</td>
+                        <td>@item.Name</td>
+                        <td>@item.Psw</td>
+                        <td><button class="btn btn-success" id="edit-btn" value="@item.U_id"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                        <td><button class="btn btn-danger" id="delete-btn" value="@item.U_id"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+
+        
+    </div>
+    <div class="col-12 my-1 d-flex justify-content-center lower-btn">
+        <button class="btn btn-primary mx-2 hide" id="save">Save</button>
+        <button class="btn btn-warning hide" id="update">Update</button>
+
+    </div>
+</div>

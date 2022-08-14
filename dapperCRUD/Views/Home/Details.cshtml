@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Car>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row my-5">
+    <div class="col-8 m-auto py-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Model</th>
+                  
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                    <th scope="row">@item.CarId</th>
+                    <td>@item.CompanyName</td>
+                    <td>@item.ModelName</td>
+                    
+                    <td><a href="EditProcess/@item.CarId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td><a href="Delete/@item.CarId" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+                }
+
+                
+            </tbody>
+        </table>
+    </div>
+</div>

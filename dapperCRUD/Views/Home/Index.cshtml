@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row my-5">
+    <div class="col-5 border border-1 border-dark m-auto py-3">
+        <form asp-action="Insert" id="insert-form" method="post"> 
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Username</label>
+    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" name="Name">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="Psw">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+</div>

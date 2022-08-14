@@ -1,0 +1,8 @@
+.table-div .lower-btn .hide {
+    display: none;
+}
+
+.table-div .disable {
+    pointer-events: none;
+    opacity: 0.6;
+}
