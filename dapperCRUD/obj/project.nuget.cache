@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iLO6/WRvp0LdQX4jaEg7y2BEBqYHnW/DiSqp79TRgpLXk4kzenvHtcpAQKcZBDyppa8Jtkx6JfNQwIg4iaU/1w==",
+  "dgSpecHash": "u/7tsn9psyIshBV0pOl54kFVfKxCQwORGOkgNBK4GFokt8F9wenOEeEMUD4B/DckZ8lDTOkLplPEoUK6dRIL1w==",
   "success": true,
-  "projectFilePath": "G:\\repos\\dapperCRUD\\dapperCRUD\\dapperCRUD.csproj",
+  "projectFilePath": "G:\\repos\\C-Dapper-MVC-CRUD\\dapperCRUD\\dapperCRUD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hp\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Hp\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

@@ -8,49 +8,49 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = dapperCRUD
 build_property.RootNamespace = dapperCRUD
-build_property.ProjectDir = G:\repos\dapperCRUD\dapperCRUD\
+build_property.ProjectDir = G:\repos\C-Dapper-MVC-CRUD\dapperCRUD\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = G:\repos\dapperCRUD\dapperCRUD
+build_property.MSBuildProjectDirectory = G:\repos\C-Dapper-MVC-CRUD\dapperCRUD
 build_property._RazorSourceGeneratorDebug = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Home/AllData.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Home/AllData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Home/Center.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Home/Center.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDZW50ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Home/Details.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Home/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Home/EditProcess.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Home/EditProcess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0UHJvY2Vzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Home/Index.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Home/LoginForm.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Home/LoginForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbkZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Shared/Error.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Shared/_ValidationScriptsPartial.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/_ViewImports.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/repos/dapperCRUD/dapperCRUD/Views/Shared/_Layout.cshtml]
+[G:/repos/C-Dapper-MVC-CRUD/dapperCRUD/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9frbvhb4zj

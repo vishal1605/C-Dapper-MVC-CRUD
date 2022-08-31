@@ -15,10 +15,7 @@ namespace dapperCRUD.Controllers
         {
             Configuration = _configuration;
         }
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        
 
         [HttpPost]
         public JsonResult Insert([FromBody] List<User> list)
@@ -57,15 +54,6 @@ namespace dapperCRUD.Controllers
             con.Execute(query, new { U_id = id });
             return Json("deleted");
         }
-
-        //public IActionResult EditProcess(int id)
-        //{
-        //    Console.WriteLine(id);
-        //    string query = "select * from tbluser where u_id=@u_id";
-        //    SqlConnection con = new SqlConnection(this.Configuration.GetConnectionString("DefaultConnection"));
-        //    User u = con.QuerySingleOrDefault<User>(query, new { U_id = id });
-        //    return View(u);
-        //}
 
         [HttpPost]
         public JsonResult Update([FromBody] User u)

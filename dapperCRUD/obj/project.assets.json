@@ -548,11 +548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\repos\\dapperCRUD\\dapperCRUD\\dapperCRUD.csproj",
+      "projectUniqueName": "G:\\repos\\C-Dapper-MVC-CRUD\\dapperCRUD\\dapperCRUD.csproj",
       "projectName": "dapperCRUD",
-      "projectPath": "G:\\repos\\dapperCRUD\\dapperCRUD\\dapperCRUD.csproj",
+      "projectPath": "G:\\repos\\C-Dapper-MVC-CRUD\\dapperCRUD\\dapperCRUD.csproj",
       "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "G:\\repos\\dapperCRUD\\dapperCRUD\\obj\\",
+      "outputPath": "G:\\repos\\C-Dapper-MVC-CRUD\\dapperCRUD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

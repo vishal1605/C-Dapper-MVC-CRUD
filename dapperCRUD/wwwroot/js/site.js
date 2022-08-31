@@ -1,4 +1,17 @@
-﻿let variable = ["U_id", "Email", "Name", "Psw"];
+﻿const searchBox = document.getElementById('search-box');
+const saveBtn = document.getElementById("save");
+const targetTableBody = document.getElementById('add-row');
+const allDeleteBtn = document.querySelectorAll("#delete-btn");
+const allEditBtn = document.querySelectorAll("#edit-btn");
+const addUserBtn = document.getElementById("add-user");
+const cancelInsertionBtn = document.getElementById("remove-form");
+
+const demoHtml = targetTableBody.cloneNode(true);
+
+let searchContent = [];
+let getTableBodyWhileSearching = [];
+
+let variable = ["U_id", "Email", "Name", "Psw"];
 const User = {
     U_id: 0,
     Email: "",
@@ -8,16 +21,18 @@ const User = {
 let userData = [];
 var myId = [];
 
-document.getElementById("add-user").addEventListener('click', (e) => {
-    //e.target.classList.add("disable");
-    document.getElementById("save").classList.remove("hide");
-    document.querySelectorAll("#delete-btn").forEach((el, i) => {
+///////////////////////////////////////Add New User Operation///////////////////////////////
+addUserBtn.addEventListener('click', (e) => {
+    saveBtn.classList.remove("hide");
+
+    allDeleteBtn.forEach((el, i) => {
         el.classList.add("disable");
-    })
-    document.querySelectorAll("#edit-btn").forEach((el, i) => {
+    });
+
+    allEditBtn.forEach((el, i) => {
         el.classList.add("disable");
-    })
-    var tbody = document.getElementById("add-row");
+    });
+    
     let newRow = document.createElement("tr");
     let child = `
                     <th scope="row">#</th>
@@ -30,41 +45,41 @@ document.getElementById("add-user").addEventListener('click', (e) => {
 
     newRow.id = "unique";
     newRow.innerHTML = child;
-    tbody.appendChild(newRow);
+    targetTableBody.appendChild(newRow);
 
 
 });
 
 //==========================Paert 1.5 Cancel Insertion Operation==============================
 
-document.getElementById("remove-form").addEventListener('click', (e) => {
+cancelInsertionBtn.addEventListener('click', (e) => {
     document.getElementById("unique").remove();
-    document.getElementById("add-user").classList.remove("disable");
+    addUserBtn.classList.remove("disable");
     if (document.querySelectorAll("#unique").length == 0) {
-        document.querySelectorAll("#delete-btn").forEach((el, i) => {
+        allDeleteBtn.forEach((el, i) => {
             el.classList.remove("disable");
         });
-        document.querySelectorAll("#edit-btn").forEach((el, i) => {
+        allEditBtn.forEach((el, i) => {
             el.classList.remove("disable");
         });
-        document.getElementById("save").classList.add("hide");
-        document.getElementById("add-user").classList.remove("disable");
+        saveBtn.classList.add("hide");
+        addUserBtn.classList.remove("disable");
     }
 
 });
 
-//==============Part2==========================
+////////////////////////////////////////Saving Process/////////////////////////////////
 
-document.getElementById("save").addEventListener('click', (e1) => {
+saveBtn.addEventListener('click', (e1) => {
+    getTableBodyWhileSearching = [];
     document.querySelectorAll("#unique").forEach((e2, index) => {
         [...e2.children].forEach((el, index) => {
             if (el.id == "td-email" || el.id == "td-name" || el.id == "td-password") {
                 User[el.children[0].name] = el.children[0].value;
                 
             } else {
-                console.log("Nanana")
-            }
-            
+                
+            }     
             
         })
 
@@ -74,13 +89,10 @@ document.getElementById("save").addEventListener('click', (e1) => {
         } else {
             userData.push({ ...User });
         }
-        
-
     });
     document.querySelectorAll("#unique").forEach((re, id) => {
         re.remove();
     })
-    console.log(userData);
     $.ajax({
         type: 'POST',
         url: "/Home/Insert",
@@ -92,9 +104,7 @@ document.getElementById("save").addEventListener('click', (e1) => {
             sendAjaxData(myId);
         }
     });    
-    
-    
-    
+      
     
 });
 //==================================Next step after ajax call==============================
@@ -269,3 +279,60 @@ document.getElementById("update").addEventListener('click', (e) => {
         }
     });
 });
+
+
+////////////////////////////////////Search Functionalty////////////////////////////////////
+
+searchBox.addEventListener('click', (e) => {
+    //var i = new RegExp(`\\b${"my"}\\b`, 'gi');
+    getTableBodyWhileSearching = [...targetTableBody.children];
+    [...targetTableBody.children].forEach((row) => {
+
+
+        var arr = row.textContent.split("");
+        var str = arr.filter(function (str) {
+            return /\S/.test(str);
+        })
+        
+        if (searchContent.indexOf(str.join('')) === -1) {
+            searchContent.push(str.join(''));
+        }
+    })
+    
+
+});
+
+
+searchBox.addEventListener('keyup', (e) => {
+    console.log(getTableBodyWhileSearching);
+    
+    if (e.target.value === "") {
+        targetTableBody.innerHTML = demoHtml.innerHTML;
+        document.querySelectorAll("#edit-btn").forEach((e) => {
+            e.addEventListener('click', demoFunction);
+        })
+        
+    } else {
+        console.log("Not")
+        targetTableBody.innerHTML = "";
+        searchContent.forEach((strring) => {
+            var s = strring.toLowerCase().match(e.target.value.toLowerCase());
+            if (s == null) {
+            } else {
+                var ids = s.input.toString().match(/\d+/g)[0]
+                getTableBodyWhileSearching.forEach((e) => {
+                    if (e.id === ids) {
+                        
+                        targetTableBody.innerHTML += e.innerHTML
+                        
+                    }
+
+                })
+
+            }
+        })
+        
+        
+    }
+    
+})
